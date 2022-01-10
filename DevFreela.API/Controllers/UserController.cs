@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace DevFreela.API.Controllers
 {
+    [Route("api/users")]
     public class UserController : ControllerBase
     {
         [HttpGet("{id}")]
@@ -21,5 +22,11 @@ namespace DevFreela.API.Controllers
         {
             return CreatedAtAction(nameof(GetById), new {id = 1}, createUserModel);
         }
+
+        [HttpPut("{id}/login")]
+        public IActionResult Login(int id) 
+        {
+            return NoContent();
+        } 
     }
 }

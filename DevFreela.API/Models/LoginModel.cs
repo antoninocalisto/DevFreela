@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace DevFreela.API.Models
 {
-    public class CreateUserModel
+    public class LoginModel
     {
         public string Username { get; set; }
 
         public string Passaword { get; set; }
 
-        public string Email { get; set; }
+        public string Email {get; set;}
     }
 }
